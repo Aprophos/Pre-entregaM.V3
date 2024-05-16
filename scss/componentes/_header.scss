@@ -1,0 +1,101 @@
+
+/*Header Sass*/
+
+.header {
+  background-color: var(--color-black-light);
+}
+.header-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+.header-market {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.header-market-logo {
+  width: 4rem;
+}
+.header-market-title {
+  font: normal 700 2rem/1.2 var(--font-primary);
+  color: var(--color-white);
+  letter-spacing: 1px;
+}
+/* Menu su Encabezado */
+.header-menu {
+  display: flex;
+  width: 50%;
+}
+.header-menu-list{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+.header-menu-list-item-link {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.header-menu-list-item-link:hover {
+  background-color: var(--color-red-light);
+  color: var(--color-white);
+  transition: background 0.3s ease;
+}
+.header-menu-list-item-link.active {
+  background-color: var(--color-red-light);
+  color: var(--color-white);
+}
+
+/* Menu Hamburguesa */
+.menu-btn {
+  display: none;
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	z-index:2;
+	overflow: hidden;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu-btn .bar {
+	width: 30px;
+	height: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  border-radius: 4px;
+	transform: translate(-50%, -50%);
+	background-color: var(--color-white);
+	transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+	top: calc(50% - 9px);
+}
+.menu-btn .bar:nth-of-type(3) {
+	top: calc(50% + 9px);
+}
+
+
+.menu-btn.active .bar:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active .bar:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active .bar:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}

@@ -1,2 +1,29 @@
-@import url(../scss/componentes/_header.scss);
-@import url(../scss/componentes/_productos.scss);
+@import 'componentes/_variables.scss';
+@import 'componentes/_header.scss';
+@import 'componentes/_productos.scss';
+@import 'componentes/_footer.scss';
+@import 'componentes/_sitemap.scss';
+@import 'componentes/_responsive.scss';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-primary;
+  position: relative;
+  font-size: 1rem;
+  background-color: $color-gray-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

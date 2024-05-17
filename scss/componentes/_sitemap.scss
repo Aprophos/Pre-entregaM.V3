@@ -1,0 +1,19 @@
+.sitemap {
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        &__link {
+            padding: 1rem;
+            color: $color-gray-dark;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            &:hover {
+                transition: all 0.3s ease;
+                text-decoration: underline;
+            }
+        }
+    }
+}

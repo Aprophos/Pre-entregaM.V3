@@ -1,60 +1,58 @@
-
-/*Header Sass*/
-
+/*** Header ***/
 .header {
-  background-color: var(--color-black-light);
+  background-color: $color-black-light;
+  &-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+  }
+  &-menu {
+    display: flex;
+    width: 50%;
+    &-list{
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      align-items: center;
+      gap: 1rem;
+      &-item-link {
+        color: $color-white;
+        text-decoration: none;
+        padding: 1rem;
+        display: block;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+        &:hover {
+          background-color: $color-red-light;
+          color: $color-white;
+          transition: background 0.3s ease;
+        }
+        &.active {
+          background-color: $color-red-light;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  &-market {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    &-logo {
+      width: 4rem;
+    }
+    &-title {
+      font: normal 700 2rem/1.2 $font-primary;
+      color: $color-white;
+      letter-spacing: 1px;
+    }
+  }
 }
-.header-container {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1rem;
-}
-.header-market {
-  display: flex;
-  width: 50%;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-}
-.header-market-logo {
-  width: 4rem;
-}
-.header-market-title {
-  font: normal 700 2rem/1.2 var(--font-primary);
-  color: var(--color-white);
-  letter-spacing: 1px;
-}
-/* Menu su Encabezado */
-.header-menu {
-  display: flex;
-  width: 50%;
-}
-.header-menu-list{
-  display: flex;
-  justify-content: end;
-  width: 100%;
-  align-items: center;
-  gap: 1rem;
-}
-.header-menu-list-item-link {
-  color: var(--color-white);
-  text-decoration: none;
-  padding: 1rem;
-  display: block;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-.header-menu-list-item-link:hover {
-  background-color: var(--color-red-light);
-  color: var(--color-white);
-  transition: background 0.3s ease;
-}
-.header-menu-list-item-link.active {
-  background-color: var(--color-red-light);
-  color: var(--color-white);
-}
+
 
 /* Menu Hamburguesa */
 .menu-btn {
@@ -76,10 +74,9 @@
 	left: 50%;
   border-radius: 4px;
 	transform: translate(-50%, -50%);
-	background-color: var(--color-white);
+	background-color: $color-white;
 	transition: all 0.3s ease-in-out;
 }
-
 .menu-btn .bar:nth-of-type(2) {
 	top: calc(50% - 9px);
 }
@@ -99,3 +96,4 @@
   top: 50%;
   transform: translate(-50%, 0%) rotate(-45deg);
 }
+/*** Header ***/

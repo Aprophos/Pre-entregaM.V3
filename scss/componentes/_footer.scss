@@ -1,0 +1,72 @@
+/*Footer*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color-black-light;
+    color: $color-white;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer__titulo {
+    font: normal 700 1.25rem/1.2 $font-primary;
+    padding: 0 1rem;
+    margin: 1rem auto;
+}
+
+.footer-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    gap: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+.footer-sociales__link {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.footer__copyright {
+    font: normal 300 0.85rem/1.2 $font-primary;
+    padding: 0 1rem;
+}
+
+.fa-instagram {
+    color: $color-red-light;
+    border-radius: 8px;
+}
+
+.fa-facebook {
+    color: $color-blue;
+    border-radius: 50%;
+}
+
+.fa-square-reddit {
+    color: $color-orange;
+    border-radius: 4px;
+}
+
+.fa-instagram,
+.fa-facebook,
+.fa-square-reddit {
+    transition: all 0.3s ease;
+}
+
+.fa-instagram:hover,
+.fa-facebook:hover,
+.fa-square-reddit:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 10%);
+}
+.footer-sitemap__link {
+    font: normal 400 1.25rem/1.2 $font-primary;
+    padding: 0 1rem 1rem;
+    margin-bottom: 2rem;
+    color: $color-white;
+}
